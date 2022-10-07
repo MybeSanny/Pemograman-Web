@@ -6,23 +6,33 @@ if(isset($_SESSION['username'])){
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>Login Page</title>
-    </head>
-    <body>
-        <!-- pastikan action menuju ke auth.php dan method POST/post -->
-        <form action="index_no_db.php" method="POST">
-            <label for="username">Username</label>
-            <input name="username" type="text" />
-            <br/>
-            <label for="password">Password</label>
-            <input name="password" type="password" />
-            <br />
-            <input type="submit" name="submit" value="login">
-        </form>
-    </body>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+
+<h1>Halaman Login <br/>Silahkan Isi</h1>
+ 
+	<div class="kotak_login">
+		<p class="tulisan_login">Silahkan login</p>
+ 
+		<form action="index.php" method="POST">
+			<label>Username</label>
+			<input type="text" name="username" class="form_login" placeholder="Username atau email .."/>
+ 
+			<label>Password</label>
+			<input type="password" name="password" class="form_login" placeholder="Password .."/>
+ 
+			<button name="submit" type="submit" class="tombol_login">LOGIN</button>
+ 
+			<br/>
+			<br/>
+			
+		</form>
+		
+	</div>
+
+</body>
 </html>
